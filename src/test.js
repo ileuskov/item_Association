@@ -1,5 +1,4 @@
 var _ = require('lodash');
-console.log(_.isEqual(1, 2));
 // 1 possible answer : ["Item1", "Item2", "Item7", "Item8"]
 const itemAssociation = [
     ['Item1', 'Item2'],
