@@ -1,5 +1,4 @@
-var _ = require('lodash');
-// 1 possible answer : ["Item1", "Item2", "Item7", "Item8"]
+/* 1 possible answer : ["Item1", "Item2", "Item7", "Item8"] */
 const itemAssociation = [
     ['Item1', 'Item2'],
     ['Item3', 'Item4'],
@@ -7,7 +6,8 @@ const itemAssociation = [
     ['Item2', 'Item8'],
     ['Item7', 'Item8'],
 ];
-// 2 possible answers : ["Item1", "Item2", "Item7", "Item8"] and ["Item3", "Item4", "Item5", "Item9"]
+/*2 possible answers : ["Item1", "Item2", "Item7", "Item8"] and ["Item3", "Item4", "Item5", "Item9"]; 
+The first one will be chosen since the lists are sorted in the alphabetical order */
 const itemAssociation2 = [
     ['Item1', 'Item2'],
     ['Item3', 'Item4'],
@@ -17,7 +17,10 @@ const itemAssociation2 = [
     ['Item4', 'Item9'],
 ];
 
-const itemAssociation3 = [ // 2 possible solutions: ["Drinks", "Food", "Glass", "Popcorn"] and ["Phone", "ScreenProtector", "Tissue", "Water"].
+/* 2 possible solutions: ["Drinks", "Food", "Glass", "Popcorn"] and ["Phone", "ScreenProtector", "Tissue", "Water"]. 
+The first one will be chosen since the lists are sorted in the alphabetical order */
+const itemAssociation3 = [
+
     ['Phone', 'ScreenProtector'],
     ['Food', 'Drinks'],
     ['Drinks', 'Glass'],
@@ -25,6 +28,15 @@ const itemAssociation3 = [ // 2 possible solutions: ["Drinks", "Food", "Glass", 
     ['Drinks', 'Popcorn'],
     ['Tissue', 'Water'],
 ];
+
+console.log('This is the first list: ')
+itemAssociation.forEach(el => console.log(el));
+
+console.log('This is the second list: ')
+itemAssociation2.forEach(el => console.log(el));
+
+console.log('This is the third list: ')
+itemAssociation3.forEach(el => console.log(el));
 
 // Sorting function that return the single longest recommendation list
 function sorting(arr) {
@@ -70,11 +82,11 @@ const answer = sorting(itemAssociation);
 const answer2 = sorting(itemAssociation2);
 const answer3 = sorting(itemAssociation3);
 
-console.log('First list is ' + itemAssociation)
-console.log('And the solution is ' + answer);
+console.log('The longest item association for the 1st list is ');
+console.log(answer);
 
-console.log('Second list is ' + itemAssociation2)
-console.log('And the solution is ' + answer2);
+console.log('The longest item association for the 2nd list is ');
+console.log(answer2);
 
-console.log('Third list is ' + itemAssociation3)
-console.log('And the solution is ' + answer3);
+console.log('The longest item association for the 3rd list is ');
+console.log(answer3);
